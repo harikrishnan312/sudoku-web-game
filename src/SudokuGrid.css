@@ -1,0 +1,74 @@
+.sudoku-container {
+    margin: 20px auto;
+    width: 320px;
+    text-align: center;
+}
+
+.sudoku-container h2 {
+    text-align: center;
+}
+
+.sudoku-container button {
+color: black;
+background-color: yellow;
+border: none;
+width: 100px;
+height: 30px;
+margin: 20px;
+font-size: large;
+font-weight:500;
+cursor: pointer;
+}
+
+.sudoku-grid {
+    display: grid;
+    /* grid-template-columns: repeat(9, 1fr); */
+    gap: 1.5px;
+    border: 1.5px solid #000;
+    background-color: #333;
+    padding-right: 6px;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    flex: 1;
+    position: relative;
+    border: 3px solid #000;
+}
+
+input[type='text'] {
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type='text'].empty {
+    background-color: #ddd;
+    /* Light gray for empty cells */
+}
+
+input[type='text'].filled {
+    background-color: #f9a825;
+    /* Yellow for filled cells */
+}
+
+input[type='text']:focus {
+    outline: none;
+}
+
+.cell:nth-child(3n),
+.cell:nth-child(6n) {
+    border-right: 1px solid #000;
+}
+
+.row:nth-child(3n) {
+    border-bottom: 1px solid #000;
+}
